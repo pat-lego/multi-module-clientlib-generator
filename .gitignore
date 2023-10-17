@@ -1,3 +1,5 @@
 dist/
 node_modules/
 ui.apps/
+target/
+node/
