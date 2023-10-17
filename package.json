@@ -1,0 +1,24 @@
+{
+  "name": "com.adobe.aem.support",
+  "version": "1.0.0",
+  "description": "Package to build clientlibs",
+  "main": "index.js",
+  "workspaces": [
+    "components/image",
+    "components/text"
+  ],
+  "scripts": {
+    "dev": "echo \"Use this to execute all workspaces\""
+  },
+  "keywords": [
+    "aem",
+    "javascript",
+    "clientlibs",
+    "webpack"
+  ],
+  "author": "Pat Legault",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.89.0"
+  }
+}
