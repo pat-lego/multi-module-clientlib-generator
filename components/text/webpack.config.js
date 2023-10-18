@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 
@@ -20,27 +19,28 @@ module.exports = {
                 test: /.s?css$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
+            {
+                test: /.js$/,
+                use: TerserPlugin.loader
+            },
         ],
     },
     optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                terserOptions: {
-                    compress: {
-                        drop_console: true,
-                    },
-                    mangle: true,
-                },
-            }),
-            new CssMinimizerPlugin(),
-        ],
+        minimize: true
     },
     plugins: [
         new CleanWebpackPlugin({
             verbose: true
         }),
         new MiniCssExtractPlugin(),
-        new TerserPlugin()
+        new TerserPlugin({
+            terserOptions: {
+                compress: {
+                    drop_console: true,
+                    drop_debugger: true,
+                },
+                mangle: true,
+            }
+        })
     ],
 };

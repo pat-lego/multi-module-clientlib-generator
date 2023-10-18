@@ -49,7 +49,7 @@
               <goal>npm</goal>
             </goals>
             <configuration>
-              <arguments>run dev --workspaces</arguments>
+              <arguments>run build --workspaces</arguments>
             </configuration>
           </execution>
         </executions>

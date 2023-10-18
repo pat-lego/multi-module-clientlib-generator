@@ -8,7 +8,7 @@
     "components/text"
   ],
   "scripts": {
-    "dev": "echo \"Use this to execute all workspaces\""
+    "build": "echo \"Use this to execute all workspaces\""
   },
   "keywords": [
     "aem",
