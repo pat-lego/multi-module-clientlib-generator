@@ -1,3 +1,5 @@
+window.func = {}
+
 window.onload = function(a,b) {
     if (a === undefined) {
         a = "Patrique";
@@ -7,10 +9,9 @@ window.onload = function(a,b) {
         b = "Legault";
     }
 
-    const r = patrique(a,b)
-    window.location = r;
+    const r = window.func(a,b)
 }
 
-function patrique(a,b) {
+window.func = function patrique(a,b) {
     return a+b;
 }
