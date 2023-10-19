@@ -7,6 +7,10 @@ window.onload = function(a,b) {
         b = "Legault";
     }
 
-    const r = a + b;
+    const r = patrique(a,b)
     window.location = r;
+}
+
+function patrique(a,b) {
+    return a+b;
 }

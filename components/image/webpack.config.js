@@ -26,7 +26,7 @@ module.exports = {
         ],
     },
     optimization: {
-        minimize: true
+        minimize: true,
     },
     plugins: [
         new CleanWebpackPlugin({
@@ -38,8 +38,10 @@ module.exports = {
                 compress: {
                     drop_console: true,
                     drop_debugger: true,
+                    keep_fnames: true,
                 },
                 mangle: true,
+                keep_fnames: true
             }
         })
     ],
